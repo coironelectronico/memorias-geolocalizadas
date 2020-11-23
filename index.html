@@ -1,41 +1,40 @@
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<style>
-    .arjs-loader {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .arjs-loader div {
-        text-align: center;
-        font-size: 1.25em;
-        color: white;
-    }
-</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorias Geolocalizadas</title>
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="estilo.css">
 
-<!-- rawgithack development URL -->
-<script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery/jquery-3.5.1.min.js"></script>
 
-<body style='margin : 0px; overflow: hidden;'>
-    <!-- minimal loader shown until image descriptors are loaded -->
-    <div class="arjs-loader">
-        <div>Loading, please wait...</div>
+</head>
+
+<body>
+
+    <div class="menu">
+        <div class="card">
+            <div class="card-header">
+                <p>Trabajo Integrador Final TPA 2020</p>
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote">
+
+                    <footer class="card-blockquote"><cite title="Source title">Memorias Geolocalizadas</cite></footer>
+                </blockquote>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-primary" data-toggle="button" aria-pressed="false" href="./realidad-aumentada.html">Iniciar Realidad Aumentada</a>
+
+                <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Ver Ubicaciones</button>
+
+            </div>
+        </div>
     </div>
-    <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
-        <!-- use rawgithack to retrieve the correct url for nft marker (see 'trex' below) -->
-        <a-nft type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex' smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <a-entity gltf-model='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf' scale="5 5 5" position="100 100 0">
-            </a-entity>
-        </a-nft>
-        <a-entity camera></a-entity>
-    </a-scene>
 </body>
+
+</html>
